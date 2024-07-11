@@ -1,0 +1,23 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int l = 0;// pointer index
+        int temp = 0;// second index
+        for(int i =0;i <=nums.length; i++){
+            if(i==l){
+                continue;
+            }
+            else{
+                int sum = nums[l]+nums[i];
+                if(sum==target){
+                    temp=i;
+                    break;
+                }
+                else{
+                    l++;
+                }
+            }
+        }
+        int res[]={l,temp};
+        return res;
+    }
+}
